@@ -14,8 +14,12 @@
             worker.addEventListener("message", onMessageFromWorker);
         }
         function onMessageFromWorker(messageEvt){
-            var msg = messageEvt.data;
-            document.getElementById("divMessages").innerHTML += msg + "<br/>";
+            var obj = messageEvt.data;
+            if (obj.type === "status"){
+                document.getElementById("divMessages").innerHTML += obj.msg + "<br/>";
+            } else if (obj.type === "progress"){
+                document.getElementById("workProgress").value = obj.percentCompleted;
+            }
         }
         function onBtnDoWorkClick(){
             worker.postMessage("start");
