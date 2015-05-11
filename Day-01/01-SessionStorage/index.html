@@ -19,9 +19,9 @@
         document.getElementById("btnAddTask").addEventListener("click", onBtnAddTaskClick);
         document.getElementById("btnRemoveCompleted").addEventListener("click", onBtnRemoveCompletedClick);
         
-        for(var i=0; i<window.localStorage.length; i++){
-            var id = window.localStorage.key(i);
-            var taskName = window.localStorage.getItem(id);
+        for(var i=0; i<window.sessionStorage.length; i++){
+            var id = window.sessionStorage.key(i);
+            var taskName = window.sessionStorage.getItem(id);
             addTaskToList(id, taskName);
         }
         
@@ -30,7 +30,7 @@
             var taskName = document.getElementById("txtTask").value;
             
             var id = Date.now();
-            window.localStorage.setItem(id, taskName);
+            window.sessionStorage.setItem(id, taskName);
             addTaskToList(id, taskName);
             
         }
