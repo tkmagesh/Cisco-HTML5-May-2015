@@ -1,0 +1,18 @@
+{
+  "name": "myServer",
+  "version": "0.1.0",
+  "description": "A simple chat server for websocket demonstration",
+  "main": "myServer.js",
+  "dependencies": {
+    "nodejs-websocket": "^1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "websocket"
+  ],
+  "author": "Magesh K",
+  "license": "ISC"
+}
