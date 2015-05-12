@@ -1,0 +1,9 @@
+h1{
+    border-color: red;
+    background: -webkit-linear-gradient(top, white 0%, lightpink 100%);
+}
+
+
+#btnRemoveCompleted{
+    display: none;
+}
